@@ -2,9 +2,19 @@ const pickupForm = document.getElementById("pickupForm");
 const submitToast = document.getElementById("submitToast");
 const themeToggle = document.getElementById("themeToggle");
 const currentYear = document.getElementById("currentYear");
+const COUNTER_ANIMATION_DURATION_MS = 1200;
+const COUNTER_FRAME_RATE_MS = 16;
 
 if (currentYear) {
   currentYear.textContent = String(new Date().getFullYear());
+}
+
+const pickupDateInput = document.getElementById("data");
+if (pickupDateInput) {
+  const minPickupDate = new Date();
+  minPickupDate.setHours(0, 0, 0, 0);
+  minPickupDate.setDate(minPickupDate.getDate() + 1);
+  pickupDateInput.min = minPickupDate.toISOString().split("T")[0];
 }
 
 const savedTheme = localStorage.getItem("theme");
@@ -34,6 +44,8 @@ pickupForm?.addEventListener("submit", (event) => {
   const dateValue = document.getElementById("data")?.value;
   const today = new Date();
   today.setHours(0, 0, 0, 0);
+  const minPickupDate = new Date(today);
+  minPickupDate.setDate(minPickupDate.getDate() + 1);
   let selectedDate = null;
   if (dateValue) {
     const [year, month, day] = dateValue.split("-").map(Number);
@@ -46,11 +58,11 @@ pickupForm?.addEventListener("submit", (event) => {
   if (!quantity || quantity < 1) {
     isValid = false;
   }
-  if (!selectedDate || selectedDate < today) {
+  if (!selectedDate || selectedDate < minPickupDate) {
     isValid = false;
-    document.getElementById("data")?.setCustomValidity("Data inválida.");
+    pickupDateInput?.setCustomValidity("Selecione uma data a partir de amanhã.");
   } else {
-    document.getElementById("data")?.setCustomValidity("");
+    pickupDateInput?.setCustomValidity("");
   }
 
   pickupForm.classList.add("was-validated");
@@ -81,9 +93,7 @@ revealElements.forEach((element) => revealObserver.observe(element));
 const counters = document.querySelectorAll(".counter");
 const animateCounter = (counter) => {
   const target = Number(counter.getAttribute("data-target"));
-  const duration = 1200;
-  const frameRate = 16;
-  const totalFrames = Math.round(duration / frameRate);
+  const totalFrames = Math.round(COUNTER_ANIMATION_DURATION_MS / COUNTER_FRAME_RATE_MS);
   let frame = 0;
   const start = 0;
   const countInterval = setInterval(() => {
@@ -95,7 +105,7 @@ const animateCounter = (counter) => {
       clearInterval(countInterval);
       counter.textContent = target.toLocaleString("pt-BR");
     }
-  }, frameRate);
+  }, COUNTER_FRAME_RATE_MS);
 };
 
 const counterObserver = new IntersectionObserver(
