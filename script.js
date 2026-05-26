@@ -34,7 +34,13 @@ pickupForm?.addEventListener("submit", (event) => {
   const dateValue = document.getElementById("data")?.value;
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  const selectedDate = dateValue ? new Date(`${dateValue}T00:00:00`) : null;
+  let selectedDate = null;
+  if (dateValue) {
+    const [year, month, day] = dateValue.split("-").map(Number);
+    if (year && month && day) {
+      selectedDate = new Date(year, month - 1, day);
+    }
+  }
 
   let isValid = pickupForm.checkValidity();
   if (!quantity || quantity < 1) {
