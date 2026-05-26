@@ -66,6 +66,10 @@ pickupForm?.addEventListener("submit", (event) => {
     return;
   }
 
+  if (!submitToast) {
+    return;
+  }
+
   pickupForm.reset();
   pickupForm.classList.remove("was-validated");
   const toastInstance = bootstrap.Toast.getOrCreateInstance(submitToast);
