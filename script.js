@@ -40,7 +40,6 @@ pickupForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   event.stopPropagation();
 
-  const quantity = Number(document.getElementById("quantidade")?.value || 0);
   const dateValue = document.getElementById("data")?.value;
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -55,9 +54,6 @@ pickupForm?.addEventListener("submit", (event) => {
   }
 
   let isValid = pickupForm.checkValidity();
-  if (!quantity || quantity < 1) {
-    isValid = false;
-  }
   if (!selectedDate || selectedDate < minPickupDate) {
     isValid = false;
     pickupDateInput?.setCustomValidity("Selecione uma data a partir de amanhã.");

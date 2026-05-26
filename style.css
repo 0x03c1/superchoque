@@ -5,7 +5,7 @@
   --color-white: #ffffff;
   --color-bg-soft: #f4f8f4;
   --text-color: #1f2a30;
-  --btn-hero-text: #112233;
+  --btn-hero-text-light: #112233;
 }
 
 [data-theme="dark"] {
@@ -57,7 +57,7 @@ body {
 
 .btn-hero {
   background-color: var(--color-secondary);
-  color: var(--btn-hero-text);
+  color: var(--btn-hero-text-light);
   border: 0;
 }
 
