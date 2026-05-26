@@ -1,3 +1,4 @@
+/* Paleta de cores sustentável */
 :root {
   --color-primary: #2e7d32;
   --color-secondary: #66bb6a;
@@ -18,6 +19,7 @@
 }
 
 html {
+  /* Scroll suave entre seções */
   scroll-behavior: smooth;
 }
 
@@ -138,6 +140,7 @@ body {
 }
 
 @media (max-width: 767.98px) {
+  /* Ajustes mobile-first */
   .section-padding {
     padding: 4rem 0;
   }
