@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sistema de Reciclagem de Lixo Eletrônico para conscientização e agendamento de coleta."
+    />
+    <meta
+      name="keywords"
+      content="reciclagem, lixo eletrônico, coleta, sustentabilidade, e-lixo"
+    />
+    <meta name="author" content="Superchoque" />
+    <title>EcoTech Recicla | Sistema de Reciclagem de Lixo Eletrônico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-custom shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">
+          <i class="bi bi-recycle me-2"></i>EcoTech Recicla
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="#materiais">Materiais</a></li>
+            <li class="nav-item"><a class="nav-link" href="#agendamento">Agendamento</a></li>
+            <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <button id="themeToggle" class="btn btn-sm btn-outline-success" type="button">
+                <i class="bi bi-moon-stars-fill me-1"></i>Dark Mode
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="inicio" class="hero-section d-flex align-items-center">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center">
+          <div class="col-lg-7 text-white reveal">
+            <h1 class="display-5 fw-bold mb-3">Recicle hoje, preserve o amanhã.</h1>
+            <p class="lead mb-4">
+              Faça parte da transformação ambiental. Agende a coleta do seu lixo eletrônico com
+              segurança e responsabilidade.
+            </p>
+            <a href="#agendamento" class="btn btn-hero btn-lg shadow">Agendar Coleta</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="sobre" class="section-padding bg-light-subtle-custom">
+        <div class="container">
+          <div class="text-center mb-5 reveal">
+            <h2 class="fw-bold">Sobre o Lixo Eletrônico</h2>
+            <p class="text-muted">
+              Entenda como o descarte correto protege o planeta e promove um futuro sustentável.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4 reveal">
+              <div class="card h-100 info-card border-0 shadow-sm">
+                <div class="card-body">
+                  <i class="bi bi-cpu-fill section-icon"></i>
+                  <h3 class="h5 mt-3">O que é?</h3>
+                  <p class="mb-0">
+                    Equipamentos eletrônicos descartados como celulares, notebooks, baterias e
+                    periféricos em fim de vida útil.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 reveal">
+              <div class="card h-100 info-card border-0 shadow-sm">
+                <div class="card-body">
+                  <i class="bi bi-globe-americas section-icon"></i>
+                  <h3 class="h5 mt-3">Impactos ambientais</h3>
+                  <p class="mb-0">
+                    O descarte inadequado contamina solo e água com metais pesados, trazendo riscos
+                    para a saúde e para ecossistemas.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 reveal">
+              <div class="card h-100 info-card border-0 shadow-sm">
+                <div class="card-body">
+                  <i class="bi bi-shield-check section-icon"></i>
+                  <h3 class="h5 mt-3">Importância da reciclagem</h3>
+                  <p class="mb-0">
+                    A reciclagem recupera materiais, reduz emissões e incentiva a economia circular
+                    com menor impacto ambiental.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="materiais" class="section-padding">
+        <div class="container">
+          <div class="text-center mb-5 reveal">
+            <h2 class="fw-bold">Materiais Aceitos</h2>
+            <p class="text-muted">Recebemos diversos tipos de equipamentos eletrônicos.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+              <div class="card material-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-phone-fill material-icon"></i>
+                  <h3 class="h6 mt-3">Celulares</h3>
+                  <p class="small mb-0">Aparelhos e acessórios móveis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+              <div class="card material-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-laptop-fill material-icon"></i>
+                  <h3 class="h6 mt-3">Computadores</h3>
+                  <p class="small mb-0">Desktops, notebooks e peças.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+              <div class="card material-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-tv-fill material-icon"></i>
+                  <h3 class="h6 mt-3">TVs</h3>
+                  <p class="small mb-0">Televisores LCD, LED e smart TVs.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+              <div class="card material-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-battery-charging material-icon"></i>
+                  <h3 class="h6 mt-3">Baterias</h3>
+                  <p class="small mb-0">Pilhas e baterias recarregáveis.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+              <div class="card material-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-usb-plug-fill material-icon"></i>
+                  <h3 class="h6 mt-3">Cabos</h3>
+                  <p class="small mb-0">Cabos, carregadores e conectores.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+              <div class="card material-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-printer-fill material-icon"></i>
+                  <h3 class="h6 mt-3">Impressoras</h3>
+                  <p class="small mb-0">Impressoras e cartuchos vazios.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+              <div class="card material-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-tablet-fill material-icon"></i>
+                  <h3 class="h6 mt-3">Tablets</h3>
+                  <p class="small mb-0">Tablets e leitores digitais.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 reveal">
+              <div class="card material-card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-display-fill material-icon"></i>
+                  <h3 class="h6 mt-3">Monitores</h3>
+                  <p class="small mb-0">Monitores e telas em geral.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="agendamento" class="section-padding bg-light-subtle-custom">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6 reveal">
+              <h2 class="fw-bold mb-3">Agende sua coleta</h2>
+              <p class="text-muted mb-4">
+                Preencha o formulário e entraremos em contato para confirmar o melhor horário.
+              </p>
+              <form id="pickupForm" class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                  <label for="nome" class="form-label">Nome completo</label>
+                  <input type="text" class="form-control" id="nome" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="telefone" class="form-label">Telefone</label>
+                  <input type="tel" class="form-control" id="telefone" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="endereco" class="form-label">Endereço</label>
+                  <input type="text" class="form-control" id="endereco" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="equipamento" class="form-label">Tipo de equipamento</label>
+                  <select id="equipamento" class="form-select" required>
+                    <option value="" selected disabled>Selecione...</option>
+                    <option>Celular</option>
+                    <option>Computador</option>
+                    <option>TV</option>
+                    <option>Bateria</option>
+                    <option>Cabo</option>
+                    <option>Impressora</option>
+                    <option>Tablet</option>
+                    <option>Monitor</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="quantidade" class="form-label">Quantidade</label>
+                  <input type="number" min="1" class="form-control" id="quantidade" required />
+                </div>
+                <div class="col-md-3">
+                  <label for="data" class="form-label">Data da coleta</label>
+                  <input type="date" class="form-control" id="data" required />
+                </div>
+                <div class="col-12">
+                  <label for="observacoes" class="form-label">Observações</label>
+                  <textarea id="observacoes" class="form-control" rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-success btn-lg shadow-sm">
+                    Solicitar Coleta
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="col-lg-6 reveal">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body p-4">
+                  <h3 class="h4 fw-semibold mb-3">Como funciona?</h3>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>Cadastro rápido do
+                      pedido de coleta.
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>Confirmação por
+                      email ou telefone.
+                    </li>
+                    <li class="mb-3">
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>Retirada segura em
+                      domicílio ou ponto parceiro.
+                    </li>
+                    <li>
+                      <i class="bi bi-check-circle-fill text-success me-2"></i>Destinação
+                      ambientalmente correta.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="section-padding">
+        <div class="container">
+          <div class="text-center mb-5 reveal">
+            <h2 class="fw-bold">Dashboard de Impacto</h2>
+            <p class="text-muted">Indicadores simulados de resultados ambientais da plataforma.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-6 col-lg-3 reveal">
+              <div class="card metric-card border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-trash3-fill metric-icon"></i>
+                  <p class="mb-1">Resíduos Coletados</p>
+                  <h3 class="counter mb-0" data-target="18750">0</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="card metric-card border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-cloud-check-fill metric-icon"></i>
+                  <p class="mb-1">CO₂ Economizado (kg)</p>
+                  <h3 class="counter mb-0" data-target="9460">0</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="card metric-card border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-tools metric-icon"></i>
+                  <p class="mb-1">Equipamentos Reciclados</p>
+                  <h3 class="counter mb-0" data-target="5420">0</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-lg-3 reveal">
+              <div class="card metric-card border-0 shadow-sm">
+                <div class="card-body text-center">
+                  <i class="bi bi-people-fill metric-icon"></i>
+                  <p class="mb-1">Usuários Cadastrados</p>
+                  <h3 class="counter mb-0" data-target="2890">0</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pontos-coleta" class="section-padding bg-light-subtle-custom">
+        <div class="container">
+          <div class="text-center mb-5 reveal">
+            <h2 class="fw-bold">Pontos de Coleta</h2>
+            <p class="text-muted">Encontre um ponto parceiro próximo de você.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-7 reveal">
+              <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps?q=Reciclagem+de+eletr%C3%B4nicos+S%C3%A3o+Paulo&output=embed"
+                  title="Mapa de pontos de coleta"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div class="col-lg-5 reveal">
+              <div class="card border-0 shadow-sm mb-3">
+                <div class="card-body">
+                  <h3 class="h6 fw-semibold mb-1">EcoHub Centro</h3>
+                  <p class="small mb-0">Rua Verde, 120 - Centro • Seg a Sáb, 9h às 18h</p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm mb-3">
+                <div class="card-body">
+                  <h3 class="h6 fw-semibold mb-1">Ponto Tech Sul</h3>
+                  <p class="small mb-0">Av. Sustentável, 540 - Zona Sul • Seg a Sex, 8h às 17h</p>
+                </div>
+              </div>
+              <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                  <h3 class="h6 fw-semibold mb-1">Recicla Norte</h3>
+                  <p class="small mb-0">Praça Circular, 22 - Zona Norte • Seg a Sáb, 10h às 19h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="depoimentos" class="section-padding">
+        <div class="container">
+          <div class="text-center mb-5 reveal">
+            <h2 class="fw-bold">Depoimentos</h2>
+            <p class="text-muted">Quem já reciclou com a gente recomenda.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4 reveal">
+              <div class="card h-100 border-0 shadow-sm testimonial-card">
+                <div class="card-body">
+                  <p class="mb-3">
+                    “Processo simples e rápido. Consegui descartar meu notebook antigo sem dor de
+                    cabeça.”
+                  </p>
+                  <strong>Marina A.</strong>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 reveal">
+              <div class="card h-100 border-0 shadow-sm testimonial-card">
+                <div class="card-body">
+                  <p class="mb-3">
+                    “Ótima iniciativa para o bairro. Agora temos ponto de coleta perto de casa.”
+                  </p>
+                  <strong>Rafael P.</strong>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 reveal">
+              <div class="card h-100 border-0 shadow-sm testimonial-card">
+                <div class="card-body">
+                  <p class="mb-3">
+                    “Atendimento excelente e consciência ambiental de verdade. Recomendo!”
+                  </p>
+                  <strong>Camila F.</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section-padding bg-light-subtle-custom">
+        <div class="container">
+          <div class="text-center mb-5 reveal">
+            <h2 class="fw-bold">Perguntas Frequentes</h2>
+          </div>
+          <div class="accordion reveal" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqOne"
+                  aria-expanded="true"
+                  aria-controls="faqOne"
+                >
+                  A coleta tem custo?
+                </button>
+              </h3>
+              <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Em regiões atendidas, o serviço básico é gratuito.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqTwo"
+                  aria-expanded="false"
+                  aria-controls="faqTwo"
+                >
+                  Posso entregar em ponto físico?
+                </button>
+              </h3>
+              <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Sim, você pode escolher um dos pontos de coleta parceiros.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqThree"
+                  aria-expanded="false"
+                  aria-controls="faqThree"
+                >
+                  Quais equipamentos não são aceitos?
+                </button>
+              </h3>
+              <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Não recebemos resíduos orgânicos, químicos ou não eletrônicos.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contato" class="footer py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h3 class="h5 text-white">EcoTech Recicla</h3>
+            <p class="small mb-0">
+              Soluções para descarte correto de lixo eletrônico com impacto positivo no planeta.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h3 class="h6 text-white">Links rápidos</h3>
+            <ul class="list-unstyled small">
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#materiais">Materiais</a></li>
+              <li><a href="#agendamento">Agendamento</a></li>
+              <li><a href="#pontos-coleta">Pontos de coleta</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3 class="h6 text-white">Contato</h3>
+            <p class="small mb-1"><i class="bi bi-envelope me-2"></i>contato@ecotechrecicla.com</p>
+            <p class="small mb-3"><i class="bi bi-telephone me-2"></i>(11) 99999-0000</p>
+            <div class="d-flex gap-3 fs-5">
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4 border-light opacity-25" />
+        <p class="small mb-0 text-center">
+          © <span id="currentYear"></span> EcoTech Recicla. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 1080">
+      <div id="submitToast" class="toast border-0" role="status" aria-live="polite" aria-atomic="true">
+        <div class="toast-header">
+          <i class="bi bi-check-circle-fill text-success me-2"></i>
+          <strong class="me-auto">Solicitação enviada</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Fechar"></button>
+        </div>
+        <div class="toast-body">Seu pedido de coleta foi registrado com sucesso.</div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
