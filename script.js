@@ -5,6 +5,7 @@ const currentYear = document.getElementById("currentYear");
 const COUNTER_ANIMATION_DURATION_MS = 1200;
 const COUNTER_FRAME_RATE_MS = 16;
 
+// Atualiza ano no rodapé
 if (currentYear) {
   currentYear.textContent = String(new Date().getFullYear());
 }
@@ -17,6 +18,7 @@ if (pickupDateInput) {
   pickupDateInput.min = minPickupDate.toISOString().split("T")[0];
 }
 
+// Persistência de tema claro/escuro
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
   document.documentElement.setAttribute("data-theme", "dark");
@@ -76,6 +78,7 @@ pickupForm?.addEventListener("submit", (event) => {
   toastInstance.show();
 });
 
+// Efeito de reveal ao entrar em viewport
 const revealElements = document.querySelectorAll(".reveal");
 const revealObserver = new IntersectionObserver(
   (entries, observer) => {
@@ -90,6 +93,7 @@ const revealObserver = new IntersectionObserver(
 );
 revealElements.forEach((element) => revealObserver.observe(element));
 
+// Animação dos indicadores numéricos
 const counters = document.querySelectorAll(".counter");
 const animateCounter = (counter) => {
   const target = Number(counter.getAttribute("data-target"));
